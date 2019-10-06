@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--
+    <div ng-app="" ng-init="firstName='John'">
+
+        <p>Input something in the input box:</p>
+        <p>Name: <input type="text" ng-model="firstName"></p>
+        <p>You wrote: {{  firstName }}</p>
+
+    </div>
+    -->
+
+    <!-- 
+    <div data-ng-app="" data-ng-init="quantity=1;price=5">
+
+        <h2>Cost Calculator</h2>
+
+        Quantity: <input type="number" ng-model="quantity">
+        Price: <input type="number" ng-model="price">
+
+        <p><b>Totla in dollar:</b>
+            {{quantity * price}}
+        </p>
+
+    </div>
+    -->
+
+    <!--
+    <div ng-app="" ng-init="names=['Jani', 'Hege', 'Kai']">
+        <p>Looping with ng-repeat:</p>
+        <ul>
+            <li ng-repeat="x in names">
+                {{ x }}
+            </li>
+        </ul>
+    </div>
+    -->
+
+    <!--
+    <div ng-app="" ng-init="names=[
+    {name:'Jani',country:'Norway'},
+    {name:'Hege',country:'Sweden'},
+    {name:'Kai',country:'Denmark'}]">
+
+        <p>Looping with objects:</p>
+        <ul>
+            <li ng-repeat="x in names">
+                {{ x.name + ', ' + x.country }}</li>
+        </ul>
+
+    </div>
+    -->
+
+    <!--
+        <body ng-app="myApp">
+
+            <w3-test-directive></w3-test-directive>
+
+            <script>
+            var app = angular.module("myApp", []);
+            app.directive("w3TestDirective", function() {
+                return {
+                    template : "<h1>Made by a directive!</h1>"
+                };
+            });
+            </script>
+
+        </body>
+    -->
+
+    <!--
+        <body ng-app="myApp">
+
+            <div w3-test-directive></div>
+
+            <script>
+            var app = angular.module("myApp", []);
+            app.directive("w3TestDirective", function() {
+                return {
+                    template : "<h1>Made by a directive!</h1>"
+                };
+            });
+            </script>
+
+        </body>
+    -->
+
+    <!--
+        <body ng-app="myApp">
+
+            <div class="w3-test-directive"></div>
+
+            <script>
+            var app = angular.module("myApp", []);
+            app.directive("w3TestDirective", function() {
+                return {
+                    restrict : "C",
+                    template : "<h1>Made by a directive!</h1>"
+                };
+            });
+            </script>
+
+            <p><strong>Note:</strong> You must add the value "C" to the restrict property to be able to invoke the directive from a class name.</p>
+
+        </body>
+    -->
+
+    <!--
+        <body ng-app="myApp">
+
+         // directive: w3-test-directive  //
+
+        <script>
+            var app = angular.module("myApp", []);
+            app.directive("w3TestDirective", function () {
+                return {
+                    restrict: "M",
+                    replace: true,
+                    template: "<h1>Made by a directive!</h1>"
+                };
+            });
+        </script>
+
+        <p><strong>Note:</strong> We've added the <strong>replace</strong> property in this example, otherwise the comment
+            would be invisible.</p>
+
+        <p><strong>Note:</strong> You must add the value "M" to the <strong>restrict</strong> property to be able to invoke
+            the directive from a comment.</p>
+
+        </body>
+    -->
+
+    <!--
+        <body ng-app="myApp">
+
+            <w3-test-directive></w3-test-directive>
+
+            <div w3-test-directive></div>
+
+            <script>
+            var app = angular.module("myApp", []);
+            app.directive("w3TestDirective", function() {
+                return {
+                    restrict : "A",
+                    template : "<h1>Made by a directive!</h1>"
+                };
+            });
+            </script>
+
+            <p><strong>Note:</strong> By setting the <strong>restrict</strong> property to "A", only the HTML element with the "w3-test-directive" attribute has invoked the directive.</p>
+
+        </body>
+    -->
+
+</body>
+
+</html>

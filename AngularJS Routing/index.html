@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+
+<!--
+<body ng-app="myApp">
+
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!red">Red</a>
+    <a href="#!green">Green</a>
+    <a href="#!blue">Blue</a>
+
+    <div ng-view></div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "main.htm"
+                })
+                .when("/red", {
+                    templateUrl: "red.htm"
+                })
+                .when("/green", {
+                    templateUrl: "green.htm"
+                })
+                .when("/blue", {
+                    templateUrl: "blue.htm"
+                });
+        });
+    </script>
+
+    <p>Click on the links to navigate to "red.htm", "green.htm", "blue.htm", or back to "main.htm"</p>
+</body>
+-->
+
+<!--
+<body ng-app="myApp">
+
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!red">Red</a>
+    <a href="#!green">Green</a>
+    <a href="#!blue">Blue</a>
+
+    <div ng-view></div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "main.htm"
+                })
+                .when("/red", {
+                    templateUrl: "red.htm"
+                })
+                .when("/green", {
+                    templateUrl: "green.htm"
+                })
+                .when("/blue", {
+                    templateUrl: "blue.htm"
+                });
+        });
+    </script>
+
+    <p>Click on the links.</p>
+
+    <p>This example uses the ng-view directive as an attribute to a DIV element.</p>
+</body>
+-->
+
+<!--
+<body ng-app="myApp">
+
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!red">Red</a>
+    <a href="#!green">Green</a>
+    <a href="#!blue">Blue</a>
+
+    <ng-view></ng-view>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "main.htm"
+                })
+                .when("/red", {
+                    templateUrl: "red.htm"
+                })
+                .when("/green", {
+                    templateUrl: "green.htm"
+                })
+                .when("/blue", {
+                    templateUrl: "blue.htm"
+                });
+        });
+    </script>
+
+    <p>Click on the links.</p>
+
+    <p>This example uses the ng-view directive as an element.</p>
+</body>
+-->
+
+<!--
+<body ng-app="myApp">
+
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!red">Red</a>
+    <a href="#!green">Green</a>
+    <a href="#!blue">Blue</a>
+
+    <div class="ng-view"></div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "main.htm"
+                })
+                .when("/red", {
+                    templateUrl: "red.htm"
+                })
+                .when("/green", {
+                    templateUrl: "green.htm"
+                })
+                .when("/blue", {
+                    templateUrl: "blue.htm"
+                });
+        });
+    </script>
+
+    <p>Click on the links.</p>
+
+    <p>This example uses the ng-view directive as a class attribute to a DIV element.</p>
+</body>
+-->
+
+<!--
+<body ng-app="myApp">
+
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!london">City 1</a>
+    <a href="#!paris">City 2</a>
+
+    <p>Click on the links to read about London and Paris.</p>
+
+    <div ng-view></div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "main.htm"
+                })
+                .when("/london", {
+                    templateUrl: "london.htm"
+                })
+                .when("/paris", {
+                    templateUrl: "paris.htm"
+                });
+        });
+    </script>
+
+</body>
+-->
+
+<!--
+<body ng-app="myApp">
+
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!london">City 1</a>
+    <a href="#!paris">City 2</a>
+
+    <p>Click on the links.</p>
+
+    <p>Note that each "view" has its own controller which each gives the "msg" variable a value.</p>
+
+    <div ng-view></div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "main.htm",
+                })
+                .when("/london", {
+                    templateUrl: "london.htm",
+                    controller: "londonCtrl"
+                })
+                .when("/paris", {
+                    templateUrl: "paris.htm",
+                    controller: "parisCtrl"
+                });
+        });
+        app.controller("londonCtrl", function ($scope) {
+            $scope.msg = "I love London";
+        });
+        app.controller("parisCtrl", function ($scope) {
+            $scope.msg = "I love Paris";
+        });
+
+    </script>
+
+</body>
+-->
+
+<!--
+<body ng-app="myApp">
+
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!banana">Banana</a>
+    <a href="#!tomato">Tomato</a>
+
+    <p>Click on the links to change the content.</p>
+
+    <p>The HTML shown in the ng-view directive are written in the template property of the $routeProvider.when method.
+    </p>
+
+    <div ng-view></div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    template: "<h1>Main</h1><p>Click on the links to change this content</p>"
+                })
+                .when("/banana", {
+                    template: "<h1>Banana</h1><p>Bananas contain around 75% water.</p>"
+                })
+                .when("/tomato", {
+                    template: "<h1>Tomato</h1><p>Tomatoes contain around 95% water.</p>"
+                });
+        });
+    </script>
+    </body>
+-->
+
+<!--
+<body ng-app="myApp">
+
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!banana">Banana</a>
+    <a href="#!tomato">Tomato</a>
+
+    <p>Click on the links to change the content.</p>
+
+    <p>Use the "otherwise" method to define what to display when none of the links are clicked.</p>
+
+    <div ng-view></div>
+
+    <script>
+        var app = angular.module("myApp", ["ngRoute"]);
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/banana", {
+                    template: "<h1>Banana</h1><p>Bananas contain around 75% water.</p>"
+                })
+                .when("/tomato", {
+                    template: "<h1>Tomato</h1><p>Tomatoes contain around 95% water.</p>"
+                })
+                .otherwise({
+                    template: "<h1>Nothing</h1><p>Nothing has been selected</p>"
+                });
+        });
+    </script>
+
+</body>
+-->
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <style>
+        input.ng-invalid {
+            background-color: pink;
+        }
+
+        input.ng-valid {
+            background-color: lightgreen;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--
+        <body ng-app="">
+
+            <p>Try writing in the input field:</p>
+
+            <form name="myForm">
+            <input name="myInput" ng-model="myInput" required>
+            </form>
+
+            <p>The input's valid state is:</p>
+            <h1>{{myForm.myInput.$valid}}</h1>
+
+        </body>
+    -->
+
+    <!--
+        <body ng-app="">
+
+            <p>Try writing an E-mail address in the input field:</p>
+
+            <form name="myForm">
+            <input type="email" name="myInput" ng-model="myInput">
+            </form>
+
+            <p>The input's valid state is:</p>
+            <h1>{{myForm.myInput.$valid}}</h1>
+            <p>Note that the state of the input field is "true" before you start writing in it, even if it does not contain an e-mail address.</p>
+
+        </body>
+    -->
+
+    <!--
+        <body ng-app="">
+
+            <p>Try writing in the input field:</p>
+
+            <form name="myForm">
+            <input name="myName" ng-model="myName" required>
+            </form>
+
+            <p>The input field requires content, and will therefore become green when you write in it.</p>
+
+        </body>
+    -->
+
+    <!--
+        <body ng-app="">
+
+            <form name="myForm">
+                <p>Try writing in the input field:</p>
+
+                <input name="myName" ng-model="myName" required>
+
+                <p>The form gets a "ng-dirty" class when the form has been modified, and will therefore turn pink.</p>
+            </form>
+
+        </body>
+    -->
+
+    <!--
+        <body ng-app="myApp">
+
+            <p>Try writing in the input field:</p>
+
+            <form name="myForm">
+                <input name="myInput" ng-model="myInput" required my-directive>
+            </form>
+
+            <p>The input's valid state is:</p>
+            <h1>{{myForm.myInput.$valid}}</h1>
+
+            <script>
+            var app = angular.module('myApp', []);
+            app.directive('myDirective', function() {
+                return {
+                    require: 'ngModel',
+                    link: function(scope, element, attr, mCtrl) {
+                        function myValidation(value) {
+                            if (value.indexOf("e") > -1) {
+                                mCtrl.$setValidity('charE', true);
+                            } else {
+                                mCtrl.$setValidity('charE', false);
+                            }
+                            return value;
+                        }
+                        mCtrl.$parsers.push(myValidation);
+                    }
+                };
+            });
+            </script>
+
+            <p>The input field must contain the character "e" to be consider valid.</p>
+
+        </body>
+    -->
+
+    <!--
+    <h2>Validation Example</h2>
+
+    <form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+
+        <p>Username:<br>
+            <input type="text" name="user" ng-model="user" required>
+            <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                <span ng-show="myForm.user.$error.required">Username is required.</span>
+            </span>
+        </p>
+
+        <p>Email:<br>
+            <input type="email" name="email" ng-model="email" required>
+            <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                <span ng-show="myForm.email.$error.required">Email is required.</span>
+                <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+            </span>
+        </p>
+
+        <p>
+            <input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+myForm.email.$dirty && myForm.email.$invalid">
+        </p>
+
+    </form>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('validateCtrl', function ($scope) {
+            $scope.user = 'John Doe';
+            $scope.email = 'john.doe@gmail.com';
+        });
+    </script>
+    -->
+</body>
+
+</html>

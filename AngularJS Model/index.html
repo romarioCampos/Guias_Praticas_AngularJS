@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <style>
+        input.ng-invalid {
+            background-color: lightblue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--
+    <div ng-app="myApp" ng-controller="myCtrl">
+        Name: <input ng-model="name">
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl', function ($scope) {
+            $scope.name = "John Doe"
+        })
+    </script>
+
+    <p>Use the ng-model directive to bind the value of the input field to a property made in the controller.</p>
+    -->
+
+    <!--
+    <div ng-app="myApp" ng-controller="myCtrl">
+        Name: <input ng-model="name">
+        <h1>You entered: {{name}}</h1>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl',
+            function ($scope) {
+                $scope.name = "John Doe"
+            })
+    </script>
+
+    <p>Change the name inside the input field, and you will see the name in the header changes accordingly.</p>
+    -->
+
+    <!--
+    <form ng-app="" name="myForm">
+        Email: <input type="email" name="myAddress" ng-model="text">
+        <span ng-show="myForm.myAddress.$error.email">NOt a valid e-mail address</span>
+    </form>
+
+    <p>Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an
+        e-mail.</p>
+    -->
+
+    <!--
+    <form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+
+        Email:
+        <input type="email" name="myAddress" ng-model="myText" required>
+        <p>Edit the e-mail address, and try to change the status.</p>
+        <h1>Status</h1>
+        <p>Valid:
+            {{myForm.myAddress.$valid}} (if true, the value meets all criteria).
+        </p>
+        <p>Dirty:
+            {{myForm.myAddress$dirty}} (if true, the value has been changed).
+        </p>
+        <p>Touched:
+            {{myForm.myAddress$touched}} (if true, the field has been in focus)
+        </p>
+
+    </form>
+    -->
+
+    <form ng-app="" name="myForm">
+        Enter your name:
+        <input name="myName" ng-model="myText" required>
+    </form>
+
+    <p>Edit the text field and it will get/lose classes according to the status.</p>
+    <p><b>Note:</b> A text field with the "required" attribute is not valid when it is empty.</p>
+
+</body>
+
+</html>

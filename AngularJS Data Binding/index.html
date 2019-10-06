@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+
+    <!--
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p ng-bind="firstname"></p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl', function ($scope) {
+            $scope.firstname = "John"
+            $scope.lastname = "Doe"
+        })
+    </script>
+
+    <p>Use the ng-bind directive to bind the innerHTML of an element to a property in the data model.</p>
+    -->
+
+    <!--
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p>First name: {{firstname}}</p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl',
+            function ($scope) {
+                $scope.firstname = "John"
+                $scope.lastname = "Doe"
+            })
+    </script>
+
+    <p>You can use double braces to display content from the data model.</p>
+    -->
+
+    <!--
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <input ng-model="firstname">
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl',
+            function ($scope) {
+                $scope.firstname = "John"
+                $scope.lastname = "Doe"
+            })
+    </script>
+
+    <p>Use the ng-model directive on HTML controls (input, select, textarea) to bind data between the view and the data
+        model.
+    </p>
+    -->
+
+    <!--
+    <div ng-app="myApp" ng-controller="myCtrl">
+        Name: <input ng-model="firstname">
+        <h1>{{firstname}}</h1>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl',
+            function ($scope) {
+                $scope.firstname = "John"
+                $scope.lastname = "Doe"
+            })
+    </script>
+
+    <p>Change the name inside the input field, and the model data will change automatically, and therefore also the
+        header will change its value.
+    </p>
+    -->
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <h1 ng-click="changeName()">{{firstname}}</h1>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl',
+            function ($scope) {
+                $scope.firstname = "John"
+                $scope.changeName = function () {
+                    $scope.firstname = "Nelly"
+                }
+            })
+    </script>
+
+    <p>Click on the header to run the "changeName" function.</p>
+
+    <p>This example demonstrates how to use the controller to change model data.</p>
+
+</body>
+
+</html>

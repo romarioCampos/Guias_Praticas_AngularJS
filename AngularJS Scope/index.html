@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <!--
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <h1>{{carname}}</h1>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl',
+            function ($scope) {
+                $scope.carname = "Volvo"
+            })
+    </script>
+
+    <p>The property "carname" was made in the controller, and can be referred to in the view by using the {{ }}
+        brackets.
+    </p>
+    -->
+
+    <!--
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <input ng-model="name">
+
+        <h1>My name is {{name}}</h1>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl',
+            function ($scope) {
+                $scope.name = "John Doe"
+            })
+    </script>
+
+    <p>When you change the name in the input field, the changes will affect the model, and it will also affect the name
+        property in the controller.
+    </p>
+    -->
+
+    <!--x
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <ul>
+            <li ng-repeat="x in names">{{x}}</li>
+        </ul>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp', [])
+        app.controller('myCtrl',
+            function ($scope) {
+                $scope.names = ["Emil", "Tobias", "Linus"]
+            })
+    </script>
+
+    <p>The variable "x" has a different value for each repetition, proving that each repetition has its own scope.</p>
+    -->
+
+    <!--
+        <body ng-app="myApp">
+
+            <p>The rootScope's favorite color:</p>
+            <h1>{{color}}</h1>
+
+            <div ng-controller="myCtrl">
+
+            <p>The scope of the controller's favorite color:</p>
+            <h1>{{color}}</h1>
+
+            </div>
+
+            <p>The rootScope's favorite color is still:</p>
+            <h1>{{color}}</h1>
+
+            <script>
+            var app = angular.module('myApp', []);
+            app.run(function($rootScope) {
+                $rootScope.color = 'blue';
+            });
+            app.controller('myCtrl', function($scope) {
+                $scope.color = "red";
+            });
+            </script>
+
+            <p>Notice that controller's color variable does not overwrite the rootScope's color value.</p>
+
+        </body>
+    -->
+
+</body>
+
+</html>
